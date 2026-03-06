@@ -232,16 +232,19 @@
 
     <!-- js section starts here -->
     <script>
+      const body = document.querySelector("body");
       const menu = document.querySelector(".menu");
       const navCollapsed = document.querySelector(".nav-collapse");
       let open = false;
       menu.addEventListener("click", () => {
         if (open) {
+          body.classList.remove("no-scroll");
           menu.classList.remove("show");
           navCollapsed.style.right = "-100%";
           open = false;
         } else {
           menu.classList.add("show");
+          body.classList.add("no-scroll");
           navCollapsed.style.right = "0";
           open = true;
         }

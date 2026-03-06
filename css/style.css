@@ -116,7 +116,10 @@ ul {
   width: calc(8.33% * 4);
   padding: 0 15px;
 }
-
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
 /* ======================
        navbar code
 =========================*/
